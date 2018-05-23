@@ -160,16 +160,31 @@
             </objects>
             <point key="canvasLocation" x="2021.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Elegir Usuario View Controller-->
         <scene sceneID="V7O-px-u4p">
             <objects>
-                <viewController id="Rqb-Hz-I0E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="legirUsuarioViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rqb-Hz-I0E" customClass="ElegirUsuarioViewController" customModule="legirUsuarioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UMz-wP-Vii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="72O-lP-lz4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwy-ei-eI3" firstAttribute="trailing" secondItem="72O-lP-lz4" secondAttribute="trailing" id="KCr-CI-g7y"/>
+                            <constraint firstItem="72O-lP-lz4" firstAttribute="leading" secondItem="pwy-ei-eI3" secondAttribute="leading" id="TAZ-Qb-Vob"/>
+                            <constraint firstItem="72O-lP-lz4" firstAttribute="top" secondItem="pwy-ei-eI3" secondAttribute="top" id="kPO-bQ-NnY"/>
+                            <constraint firstItem="pwy-ei-eI3" firstAttribute="bottom" secondItem="72O-lP-lz4" secondAttribute="bottom" id="zC2-7I-2Ac"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pwy-ei-eI3"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="72O-lP-lz4" id="jWh-5l-PfE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsS-pG-X8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

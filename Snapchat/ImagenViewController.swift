@@ -42,10 +42,18 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        chooseContactButton.isEnabled = false
         let imagenesFolder = Storage.storage().reference().child("imagenes")
         let imagenData = UIImagePNGRepresentation(imageView.image!)!
         
         
+        imagenesFolder.child("\(NSUUID().uuidString)").putData(imagenData, metadata: nil, completion: { (metadata,error) in
+            print("Intentando subir la imagen")
+            if error != nil{
+                print("Ocurrio un error:\(error)")
+            }
+        })
+
     }
 }
 
