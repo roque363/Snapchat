@@ -103,7 +103,7 @@
         <!--Imagen View Controller-->
         <scene sceneID="LTn-Yw-SDE">
             <objects>
-                <viewController id="fCS-bg-zQw" customClass="ImagenViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImagenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fCS-bg-zQw" customClass="ImagenViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AeR-v9-Wvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,7 +163,7 @@
         <!--Elegir Usuario View Controller-->
         <scene sceneID="V7O-px-u4p">
             <objects>
-                <viewController storyboardIdentifier="legirUsuarioViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rqb-Hz-I0E" customClass="ElegirUsuarioViewController" customModule="legirUsuarioViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="legirUsuarioViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rqb-Hz-I0E" customClass="ElegirUsuarioViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UMz-wP-Vii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +183,7 @@
                         <viewLayoutGuide key="safeArea" id="pwy-ei-eI3"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="72O-lP-lz4" id="jWh-5l-PfE"/>
+                        <outlet property="tableView" destination="72O-lP-lz4" id="bIM-R1-RGP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsS-pG-X8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
