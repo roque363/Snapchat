@@ -26,23 +26,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SnapChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPB-BQ-WSh">
-                                <rect key="frame" x="73.5" y="45" width="228" height="56"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="48"/>
-                                <color key="textColor" red="0.15968331690000001" green="0.31794670219999999" blue="0.43669030069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-kT-Ooc">
-                                <rect key="frame" x="87.5" y="126" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="X6L-Px-RBY"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzR-zO-HVY">
-                                <rect key="frame" x="87.5" y="166" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="380" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ZRZ-Dy-b5h"/>
                                 </constraints>
@@ -50,13 +35,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchatv4" translatesAutoresizingMaskIntoConstraints="NO" id="hWu-gU-GJ5">
+                                <rect key="frame" x="62.5" y="50" width="250" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="CtJ-bf-QPc"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-kT-Ooc">
+                                <rect key="frame" x="87.5" y="294" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="X6L-Px-RBY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-5q-gBc">
+                                <rect key="frame" x="87" y="263" width="83" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <color key="textColor" red="0.17773568796287059" green="0.3594106363609294" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-PZ-Fgp">
+                                <rect key="frame" x="87" y="349" width="107.5" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <color key="textColor" red="0.177735688" green="0.35941063639999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjW-VN-T8o" customClass="RoundButton" customModule="Snapchat" customModuleProvider="target">
-                                <rect key="frame" x="117.5" y="226" width="140" height="33"/>
+                                <rect key="frame" x="107.5" y="439" width="160" height="45"/>
                                 <color key="backgroundColor" red="0.16632220149999999" green="0.27370482680000002" blue="0.36363753679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="x8S-73-Zsy"/>
+                                    <constraint firstAttribute="height" constant="45" id="oAt-1U-MDE"/>
+                                    <constraint firstAttribute="width" constant="160" id="x8S-73-Zsy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
                                 <state key="normal" title="Iniciar Sesión">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -70,14 +83,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="CKT-kT-Ooc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CIm-gq-k1G"/>
-                            <constraint firstItem="CKT-kT-Ooc" firstAttribute="top" secondItem="CPB-BQ-WSh" secondAttribute="bottom" constant="25" id="EsI-lg-4IG"/>
-                            <constraint firstItem="ZjW-VN-T8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HO5-HH-DHg"/>
-                            <constraint firstItem="ZjW-VN-T8o" firstAttribute="top" secondItem="mzR-zO-HVY" secondAttribute="bottom" constant="30" id="JAC-Uo-IO9"/>
-                            <constraint firstItem="CPB-BQ-WSh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T7m-mN-0FG"/>
-                            <constraint firstItem="mzR-zO-HVY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W1x-B1-E9M"/>
-                            <constraint firstItem="CPB-BQ-WSh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="cKp-FI-XKo"/>
-                            <constraint firstItem="mzR-zO-HVY" firstAttribute="top" secondItem="CKT-kT-Ooc" secondAttribute="bottom" constant="10" id="kH7-L8-uRp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qg2-5q-gBc" secondAttribute="trailing" constant="205" id="1el-q5-vat"/>
+                            <constraint firstItem="mzR-zO-HVY" firstAttribute="top" secondItem="RoE-PZ-Fgp" secondAttribute="bottom" constant="10" id="29Z-Uk-uk5"/>
+                            <constraint firstItem="Qg2-5q-gBc" firstAttribute="top" secondItem="hWu-gU-GJ5" secondAttribute="bottom" constant="39" id="5Qs-3T-XJi"/>
+                            <constraint firstItem="Qg2-5q-gBc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="C8P-cZ-jIq"/>
+                            <constraint firstItem="CKT-kT-Ooc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0p-5B-RoZ"/>
+                            <constraint firstItem="hWu-gU-GJ5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="F29-2Q-r4Q"/>
+                            <constraint firstItem="hWu-gU-GJ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJX-GE-HmM"/>
+                            <constraint firstItem="CKT-kT-Ooc" firstAttribute="top" secondItem="Qg2-5q-gBc" secondAttribute="bottom" constant="10" id="TIK-sR-oGZ"/>
+                            <constraint firstItem="ZjW-VN-T8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ThZ-ae-6gg"/>
+                            <constraint firstItem="RoE-PZ-Fgp" firstAttribute="top" secondItem="CKT-kT-Ooc" secondAttribute="bottom" constant="25" id="ZJ2-ir-ovp"/>
+                            <constraint firstItem="ZjW-VN-T8o" firstAttribute="top" secondItem="mzR-zO-HVY" secondAttribute="bottom" constant="29" id="aAB-gx-Mna"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RoE-PZ-Fgp" secondAttribute="trailing" constant="180.5" id="mmQ-O0-M5a"/>
+                            <constraint firstItem="mzR-zO-HVY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvv-cJ-8W8"/>
+                            <constraint firstItem="RoE-PZ-Fgp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="zXP-gR-Q5V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -89,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="134"/>
+            <point key="canvasLocation" x="-303.19999999999999" y="133.5832083958021"/>
         </scene>
         <!--Snaps View Controller-->
         <scene sceneID="JPl-go-Kps">
@@ -201,10 +220,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-zE-Vji" customClass="RoundButton" customModule="Snapchat" customModuleProvider="target">
-                                <rect key="frame" x="115" y="277" width="145" height="32"/>
+                                <rect key="frame" x="107.5" y="277" width="160" height="45"/>
                                 <color key="backgroundColor" red="0.16632220149999999" green="0.27370482680000002" blue="0.36363753679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="nAg-Br-J5Q"/>
+                                    <constraint firstAttribute="height" constant="45" id="6fn-dK-xXI"/>
+                                    <constraint firstAttribute="width" constant="160" id="nAg-Br-J5Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <state key="normal" title="Elegir contacto">
@@ -299,4 +319,7 @@
             <point key="canvasLocation" x="473" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="snapchatv4" width="200" height="174"/>
+    </resources>
 </document>
