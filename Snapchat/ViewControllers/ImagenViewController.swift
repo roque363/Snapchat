@@ -16,11 +16,12 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var chooseContactButton: UIButton!
     
     var imagePicker = UIImagePickerController()
+    var imagenID = NSUUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-
+        chooseContactButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +29,7 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
+        chooseContactButton.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
@@ -38,22 +40,35 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func chooseContactTapped(_ sender: Any) {
-        performSegue(withIdentifier: "chooseContactSegue", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         chooseContactButton.isEnabled = false
         let imagenesFolder = Storage.storage().reference().child("imagenes")
         let imagenData = UIImagePNGRepresentation(imageView.image!)!
-        
-        
-        imagenesFolder.child("\(NSUUID().uuidString)").putData(imagenData, metadata: nil, completion: { (metadata,error) in
+        let urlImagen = "\(imagenID).jpg"
+        imagenesFolder.child(urlImagen).putData(imagenData, metadata: nil, completion: { (metadata,error) in
             print("Intentando subir la imagen")
             if error != nil{
-                print("Ocurrio un error:\(error)")
+                print("Ocurrio un error")
+            } else {
+                print("Uploaded")
+                let imagenroute = imagenesFolder.child(urlImagen)
+                imagenroute.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        print(error!)
+                        return
+                    }
+                    if url != nil {
+                        self.performSegue(withIdentifier: "chooseContactSegue", sender: url!.absoluteString)
+                    }
+                })
             }
         })
-
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let siguienteVC = segue.destination as! ElegirUsuarioViewController
+        siguienteVC.imagenURL = sender as! String
+        siguienteVC.descrip = descriptionTextField.text!
+        siguienteVC.imagenID = imagenID
     }
 }
 
